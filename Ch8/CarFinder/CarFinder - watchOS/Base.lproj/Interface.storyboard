@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="9060" systemVersion="15C40a" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="9019"/>
+    </dependencies>
+    <scenes>
+        <!--CarFinder-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller title="CarFinder" id="AgC-eL-Hgc" customClass="InterfaceController" customModule="CarFinder___watchOS" customModuleProvider="target">
+                    <items>
+                        <table alignment="left" id="cpA-t9-blz">
+                            <items>
+                                <tableRow identifier="LocationRowController" id="FrZ-8i-phI" customClass="LocationRowController" customModule="CarFinder___watchOS_Extension">
+                                    <group key="rootItem" width="1" height="49.5" alignment="left" layout="vertical" id="eEa-Fi-dWD">
+                                        <items>
+                                            <label width="135.5" alignment="left" text="Label" id="fMl-Sz-skP"/>
+                                            <label width="133.5" alignment="left" text="Label" id="SV7-qk-PkS">
+                                                <fontDescription key="font" style="UICTFontTextStyleSubhead"/>
+                                            </label>
+                                        </items>
+                                        <connections>
+                                            <segue destination="LWW-oI-Sar" kind="push" identifier="DetailSegue" id="ZAt-dl-UCL"/>
+                                        </connections>
+                                    </group>
+                                    <connections>
+                                        <outlet property="coordinatesLabel" destination="fMl-Sz-skP" id="Si2-rG-GlB"/>
+                                        <outlet property="timeLabel" destination="SV7-qk-PkS" id="ggx-Oy-EZO"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                    </items>
+                    <menu key="menu" id="4qJ-yF-wBW">
+                        <items>
+                            <menuItem title="Add Location" icon="add" id="CpJ-3O-mWP">
+                                <connections>
+                                    <action selector="requestLocation" destination="AgC-eL-Hgc" id="5KO-8I-Dg0"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Reset" icon="trash" id="rr2-pf-1rY">
+                                <connections>
+                                    <action selector="resetLocations" destination="AgC-eL-Hgc" id="V73-ae-pbB"/>
+                                </connections>
+                            </menuItem>
+                        </items>
+                    </menu>
+                    <connections>
+                        <outlet property="locationTable" destination="cpA-t9-blz" id="Gj5-6W-oel"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="235" y="347"/>
+        </scene>
+        <!--New Location-->
+        <scene sceneID="8dp-tn-J6M">
+            <objects>
+                <controller identifier="ConfirmInterfaceController" title="New Location" id="6J7-k7-zc4" customClass="ConfirmInterfaceController" customModule="CarFinder___watchOS_Extension">
+                    <items>
+                        <group width="1" alignment="left" layout="vertical" id="I7t-ah-Red">
+                            <items>
+                                <label width="135.5" alignment="left" text="Coordinates" id="0ib-X1-eqp">
+                                    <fontDescription key="font" style="UICTFontTextStyleSubhead"/>
+                                </label>
+                                <label width="136" alignment="left" text="Notes" id="K6A-Dd-zv2"/>
+                                <label width="135.5" alignment="left" text="Time on Meter" id="SHT-ma-Yot"/>
+                                <button width="1" alignment="left" title="Confirm" id="bxo-ke-vuv">
+                                    <connections>
+                                        <action selector="confirm" destination="6J7-k7-zc4" id="9fS-hY-M0D"/>
+                                    </connections>
+                                </button>
+                                <button width="1" alignment="left" title="Add Note" id="EdX-39-rSw">
+                                    <connections>
+                                        <action selector="addNote" destination="6J7-k7-zc4" id="RMn-B7-IMw"/>
+                                    </connections>
+                                </button>
+                                <button width="1" alignment="left" title="Add Time" id="MTk-fV-JQX">
+                                    <connections>
+                                        <action selector="incrementTime" destination="6J7-k7-zc4" id="Uvl-d8-Qaa"/>
+                                    </connections>
+                                </button>
+                                <button width="1" alignment="left" title="Cancel" id="xdr-Au-3zd">
+                                    <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                    <connections>
+                                        <action selector="cancel" destination="6J7-k7-zc4" id="yhG-D2-aSx"/>
+                                    </connections>
+                                </button>
+                            </items>
+                        </group>
+                    </items>
+                    <connections>
+                        <outlet property="coordinatesLabel" destination="0ib-X1-eqp" id="F5N-K5-wXQ"/>
+                        <outlet property="noteLabel" destination="K6A-Dd-zv2" id="D9D-RR-yHQ"/>
+                        <outlet property="timeLabel" destination="SHT-ma-Yot" id="LW5-7c-h0H"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="235" y="609.75"/>
+        </scene>
+        <!--Details-->
+        <scene sceneID="Rjh-Bd-Wb9">
+            <objects>
+                <controller title="Details" id="LWW-oI-Sar" customClass="LocationInterfaceController" customModule="CarFinder___watchOS_Extension">
+                    <items>
+                        <group width="1" alignment="left" id="L5F-RS-4e7">
+                            <items>
+                                <imageView width="38" height="41" alignment="left" image="Compass" id="ii2-c8-WKr"/>
+                                <label width="90.5" height="39.5" alignment="left" text="Location" id="cPg-75-IYS">
+                                    <fontDescription key="font" style="UICTFontTextStyleSubhead"/>
+                                </label>
+                            </items>
+                        </group>
+                        <group width="1" alignment="left" layout="vertical" id="1jY-Lc-2cW">
+                            <items>
+                                <label width="132.5" alignment="left" text="Time parked" id="fP2-Vy-sAt"/>
+                                <label width="126.5" alignment="left" text="Current Weather" id="tGp-6a-SV6">
+                                    <fontDescription key="font" style="UICTFontTextStyleCaption1"/>
+                                </label>
+                                <map height="100" alignment="left" id="EiL-Re-Ric"/>
+                            </items>
+                        </group>
+                    </items>
+                    <connections>
+                        <outlet property="coordinatesLabel" destination="cPg-75-IYS" id="9tk-SP-TnI"/>
+                        <outlet property="locationMap" destination="EiL-Re-Ric" id="JGD-MD-akw"/>
+                        <outlet property="timeLabel" destination="fP2-Vy-sAt" id="RLX-vP-57N"/>
+                        <outlet property="weatherLabel" destination="tGp-6a-SV6" id="GdF-8B-xgE"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="451" y="346.5"/>
+        </scene>
+        <!--Glance Interface Controller-->
+        <scene sceneID="BOz-TT-tkC">
+            <objects>
+                <glanceController spacing="0.0" id="0uZ-2p-rRc" customClass="GlanceController" customModule="CarFinder___watchOS" customModuleProvider="target">
+                    <items>
+                        <group alignment="left" id="t8f-Gd-c4y"/>
+                        <group alignment="left" id="uCw-4Q-Ouw"/>
+                    </items>
+                    <edgeInsets key="margins" left="0.0" right="0.0" top="0.0" bottom="14"/>
+                </glanceController>
+            </objects>
+            <point key="canvasLocation" x="235" y="966"/>
+        </scene>
+        <!--Static Notification Interface Controller-->
+        <scene sceneID="AEw-b0-oYE">
+            <objects>
+                <notificationController id="YCC-NB-fut">
+                    <items>
+                        <label alignment="left" text="Alert Label" id="XkS-y5-khE"/>
+                    </items>
+                    <notificationCategory key="notificationCategory" identifier="myCategory" id="JfB-70-Muf"/>
+                    <connections>
+                        <outlet property="notificationAlertLabel" destination="XkS-y5-khE" id="49B-RR-99y"/>
+                        <segue destination="gdX-wl-uQE" kind="relationship" relationship="dynamicNotificationInterface" id="fKh-qV-3T2"/>
+                    </connections>
+                </notificationController>
+            </objects>
+            <point key="canvasLocation" x="235" y="1295"/>
+        </scene>
+        <!--Notification Controller-->
+        <scene sceneID="KIl-fV-djm">
+            <objects>
+                <controller id="gdX-wl-uQE" customClass="NotificationController" customModule="CarFinder___watchOS" customModuleProvider="target"/>
+            </objects>
+            <point key="canvasLocation" x="553" y="1295"/>
+        </scene>
+    </scenes>
+</document>

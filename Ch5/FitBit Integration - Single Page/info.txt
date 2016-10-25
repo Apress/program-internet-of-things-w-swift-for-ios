@@ -1,0 +1,16 @@
+I
+http://stackoverflow.com/questions/24176362/nsurlconnection-using-ios-swift
+http://jamesonquave.com/blog/making-a-post-request-in-swift/
+http://www.atimi.com/simple-json-parsing-swift-2/
+
+https://developer.apple.com/library/ios/documentation/Swift/Conceptual/BuildingCocoaApps/MixandMatch.html
+https://github.com/SwiftP2P/SwiftSSL
+http://stackoverflow.com/questions/25761344/how-to-crypt-string-to-sha1-with-swift
+http://stackoverflow.com/questions/24099520/commonhmac-in-swift
+http://stackoverflow.com/questions/756492/objective-c-sample-code-for-hmac-sha1
+Verify this:
+http://stackoverflow.com/questions/26688043/same-hmac-algorithm-in-obj-c-and-swift-creates-different-hashes
+
+{"Response":{"key":"value"}}
+
+

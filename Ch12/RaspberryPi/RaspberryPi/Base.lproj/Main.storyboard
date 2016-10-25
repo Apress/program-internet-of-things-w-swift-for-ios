@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="RaspberryPi" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bc0-Vj-sNt">
+                                <rect key="frame" x="230" y="40" width="139" height="59"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="139" id="TcC-PD-vzE"/>
+                                    <constraint firstAttribute="height" constant="59" id="qsH-uW-NtI"/>
+                                </constraints>
+                                <state key="normal" title="Clear Log"/>
+                                <connections>
+                                    <action selector="clickClearButton" destination="BYZ-38-t0r" eventType="touchDown" id="2iQ-So-oj9"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V3F-Cf-nK6">
+                                <rect key="frame" x="235" y="173" width="130" height="44"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="130" id="LyK-hJ-Pox"/>
+                                    <constraint firstAttribute="height" constant="44" id="zQV-Ex-HfB"/>
+                                </constraints>
+                                <state key="normal" title="Blink red light"/>
+                                <connections>
+                                    <action selector="clickButton2" destination="BYZ-38-t0r" eventType="touchDown" id="wMC-dY-caE"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="k71-jL-Y2X">
+                                <rect key="frame" x="36" y="277" width="528" height="307"/>
+                                <animations/>
+                                <color key="backgroundColor" red="1" green="0.79017111958989594" blue="0.77993912586161607" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="em4-Ke-x0I">
+                                <rect key="frame" x="228" y="111" width="143" height="50"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="143" id="QB6-Cm-pFs"/>
+                                    <constraint firstAttribute="height" constant="50" id="Vc0-h8-jkF"/>
+                                </constraints>
+                                <state key="normal" title="Blink all lights"/>
+                                <connections>
+                                    <action selector="clickButton" destination="BYZ-38-t0r" eventType="touchDown" id="qMC-Za-3Ce"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="k71-jL-Y2X" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="16" id="2aJ-kg-2sf"/>
+                            <constraint firstItem="k71-jL-Y2X" firstAttribute="top" secondItem="V3F-Cf-nK6" secondAttribute="bottom" constant="60" id="3ta-Z5-YSA"/>
+                            <constraint firstItem="V3F-Cf-nK6" firstAttribute="top" secondItem="em4-Ke-x0I" secondAttribute="bottom" constant="12" id="4bj-jv-xXA"/>
+                            <constraint firstItem="em4-Ke-x0I" firstAttribute="top" secondItem="bc0-Vj-sNt" secondAttribute="bottom" constant="12" id="A6j-dz-4jI"/>
+                            <constraint firstItem="em4-Ke-x0I" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Eih-Ob-ZRP"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="k71-jL-Y2X" secondAttribute="bottom" constant="16" id="Yc9-7P-UfX"/>
+                            <constraint firstItem="V3F-Cf-nK6" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Z78-ke-jXj"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="k71-jL-Y2X" secondAttribute="trailing" constant="16" id="bsV-1Y-dXW"/>
+                            <constraint firstItem="bc0-Vj-sNt" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="cr2-xn-5cM"/>
+                            <constraint firstItem="bc0-Vj-sNt" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jdS-26-CXj"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="clearButton" destination="bc0-Vj-sNt" id="ReQ-3F-Q6k"/>
+                        <outlet property="labelButton" destination="em4-Ke-x0I" id="RfC-lN-qZF"/>
+                        <outlet property="labelButton2" destination="V3F-Cf-nK6" id="uBq-uv-W5T"/>
+                        <outlet property="textArea" destination="k71-jL-Y2X" id="eI5-0c-A76"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="305" y="239"/>
+        </scene>
+    </scenes>
+</document>

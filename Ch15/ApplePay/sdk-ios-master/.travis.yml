@@ -1,0 +1,6 @@
+
+# reference: http://www.objc.io/issue-6/travis-ci.html
+
+language: objective-c
+xcode_project: 'sdk/Anet SDK.xcodeproj'
+

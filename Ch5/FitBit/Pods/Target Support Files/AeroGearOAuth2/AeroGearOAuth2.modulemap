@@ -1,0 +1,6 @@
+framework module AeroGearOAuth2 {
+  umbrella header "AeroGearOAuth2-umbrella.h"
+
+  export *
+  module * { export * }
+}

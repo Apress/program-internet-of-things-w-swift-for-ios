@@ -1,0 +1,249 @@
+To start implementing the first steps
+
+        // request.URL =  NSURL(string: "https://api.fitbit.com/oauth/request_token")
+        // oauthHandler.signTempAccessToken(request)
+
+
+The hmac code did not work with this
+        //var hash = NSMutableString()
+        //for i in 0..<digestLen {
+        //    hash.appendFormat("%02x", result[i])
+        //}
+        //result.destroy()
+        //return String(hash)
+
+It did however work with this:
+        // http://stackoverflow.com/questions/26970807/implementing-hmac-and-sha1-encryption-in-swift
+        let data = NSData(bytes: result, length: digestLen)
+        result.destroy()
+        return data.base64EncodedStringWithOptions(NSDataBase64EncodingOptions.Encoding64CharacterLineLength)
+
+
+Did not work from the app
+
+TIMESTAMP: 1429470249
+NONCE: ej2OW6ZoncO
+REQUEST URL: https://api.fitbit.com/1/user/-/profile.json
+Signature Base String: GET&https%3A%2F%2Fapi.fitbit.com%2F1%2Fuser%2F-%2Fprofile.json&oauth_consumer_key%3D6cf4162a72ac4a4382c098caec132782%26oauth_nonce%3Dej2OW6ZoncO%26oauth_signature_method%3DHMAC-SHA1%26oauth_timestamp%3D1429470249%26oauth_token%3D5a3ca2edf91d7175cad30bc3533e3c8a%26oauth_version%3D1.0
+Signature Key: c652d5fb28f344679f3b6b12121465af&da5bc974d697470a93ec59e9cfaee06d
+Signature: x9K9LalxM8Ol8tlg8/lsEo++t/M=
+
+
+
+Worked from the test page
+
+GET&https%3A%2F%2Fapi.fitbit.com%2F1%2Fuser%2F-%2Fprofile.json&oauth_consumer_key%3D6cf4162a72ac4a4382c098caec132782%26oauth_nonce%3Dej2OW6ZoncO%26oauth_signature_method%3DHMAC-SHA1%26oauth_timestamp%3D1429470249%26oauth_token%3D5a3ca2edf91d7175cad30bc3533e3c8a%26oauth_version%3D1.0
+
+19-Apr 12:07:37 [87] $ curl -X GET -i -H 'Authorization: OAuth oauth_consumer_key="6cf4162a72ac4a4382c098caec132782", oauth_nonce="ej2OW6ZoncO", oauth_signature="x9K9LalxM8Ol8tlg8%2FlsEo%2B%2Bt%2FM%3D", oauth_signature_method="HMAC-SHA1", oauth_timestamp="1429470249", oauth_token="5a3ca2edf91d7175cad30bc3533e3c8a", oauth_version="1.0"' https://api.fitbit.com/1/user/-/profile.json
+HTTP/1.1 200 OK
+Server: nginx
+X-UA-Compatible: IE=edge,chrome=1
+Expires: Thu, 01 Jan 1970 00:00:00 GMT
+Cache-control: no-cache, must-revalidate
+Pragma: no-cache
+Fitbit-Rate-Limit-Limit: 150
+Fitbit-Rate-Limit-Remaining: 149
+Fitbit-Rate-Limit-Reset: 3141
+Set-Cookie: JSESSIONID=3B1263FEBF2A36EE08DC0F4781E90DF1.fitbit1; Path=/; HttpOnly
+Content-Type: application/json;charset=UTF-8
+Content-Language: en
+Content-Length: 657
+Vary: Accept-Encoding
+Date: Sun, 19 Apr 2015 19:07:38 GMT
+
+{"user":{"avatar":"http://www.fitbit.com/images/profile/defaultProfile_100_male.gif","avatar150":"http://www.fitbit.com/images/profile/defaultProfile_150_male.gif","country":"US","dateOfBirth":"","displayName":"","distanceUnit":"en_US","encodedId":"3BRQLQ","foodsLocale":"en_US","gender":"NA","glucoseUnit":"en_US","height":0,"heightUnit":"en_US","locale":"en_US","memberSince":"2015-04-02","offsetFromUTCMillis":-25200000,"startDayOfWeek":"SUNDAY","strideLengthRunning":86.60000000000001,"strideLengthWalking":67.10000000000001,"timezone":"America/Los_Angeles","topBadges":[],"waterUnit":"en_US","waterUnitName":"fl oz","weight":62.5,"weightUnit":"en_US"}
+
+
+[Content-Type: application/json;charset=UTF-8, Pragma: no-cache, Fitbit-Rate-Limit-Remaining: 149, Set-Cookie: JSESSIONID=DED2203D347E7A5FCD870B007C6AC146.fitbit1; Path=/; HttpOnly, Server: nginx, Fitbit-Rate-Limit-Limit: 150, Content-Language: en, Expires: Thu, 01 Jan 1970 00:00:00 GMT, Transfer-Encoding: Identity, Content-Encoding: gzip, Cache-Control: no-cache, must-revalidate, Date: Sun, 19 Apr 2015 20:05:55 GMT, Fitbit-Rate-Limit-Reset: 3245, X-UA-Compatible: IE=edge,chrome=1, Vary: Accept-Encoding]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Authentication Flow
+
+1. Enter your all required data
+
+Client (Consumer) Key:	6cf4162a72ac4a4382c098caec132782
+Client (Consumer) Secret:	c652d5fb28f344679f3b6b12121465af
+Nonce(any random string):	random
+Timestamp:	1429395502
+Temporary Credentials (Request Token) URL:	https://api.fitbit.com/oauth/request_token
+
+
+
+2. Compare that your code generates the same signature as below
+
+Please compare the signature your code generates with the signature below. Since the signature is dependent on your client (consumer) secret and base string, please make sure that the base string that your code generates is the same as below.
+
+Base string:	POST&https%3A%2F%2Fapi.fitbit.com%2Foauth%2Frequest_token&oauth_consumer_key%3D6cf4162a72ac4a4382c098caec132782%26oauth_nonce%3Drandom%26oauth_signature_method%3DHMAC-SHA1%26oauth_timestamp%3D1429395502%26oauth_version%3D1.0
+Signed with:	c652d5fb28f344679f3b6b12121465af&
+Signature:	U7FhZJw4Ps2qJ80fl1wJZZSPjcE=
+
+3. Execute this command(Unix only)(A)
+Below is example of valid request for request_token. Please beware that the timestamp should be very close to current time, otherwise you'll get unauthorized response saying that you need to provide a valid timestamp.
+
+$ curl -X POST -i -H 'Authorization: OAuth oauth_consumer_key="6cf4162a72ac4a4382c098caec132782", oauth_nonce="random", oauth_signature="U7FhZJw4Ps2qJ80fl1wJZZSPjcE%3D", oauth_signature_method="HMAC-SHA1", oauth_timestamp="1429395502", oauth_version="1.0"' https://api.fitbit.com/oauth/request_token
+    HTTP/1.1 200 OK
+    Server: nginx
+    X-UA-Compatible: IE=edge,chrome=1
+    Expires: Thu, 01 Jan 1970 00:00:00 GMT
+    Cache-control: no-store, no-cache, must-revalidate
+    Pragma: no-cache
+    Set-Cookie: fhttps=""; Expires=Thu, 01-Jan-1970 00:00:10 GMT; Path=/
+    Content-Type: application/x-www-form-urlencoded;charset=UTF-8
+    Content-Language: en-US
+    Content-Length: 126
+    Date: Sat, 18 Apr 2015 22:18:44 GMT
+    
+    oauth_token=181ae9806e894fb8ac31727f87603adf&oauth_token_secret=b35148d75047f5f5d5be1935614a7d41&oauth_callback_confirmed=true
+
+ 4. Get your Temporary Access Token and Temporary Access Token Secret(B)
+As a result of CURL request that you made above, you'll get a response that contains Temporary Access Token and Temporary Access Token Secret. You'll use this data in next step. Note that we're using CURL just as example. You can use any other tool that you prefer to make requests. Make sure that you pass proper headers and URL to the tool of your choice.
+
+
+Obtain Fitbit User Authorization(C-D).
+At this point, when you get your temporary access token, you can redirect the Fitbit user to Fitbit's authentication page where they can grant access for their data to your application. For more details, please see sections B-C in Oauth workflow diagram.
+
+
+
+5. Enter your Temporary Access Token and Temporary Access Token Secret.
+
+Copy and paste Temporary Access Token and Temporary Access Secret that you received in response in previous section.
+
+Temporary Access Token	181ae9806e894fb8ac31727f87603adf
+Temporary Access Token Secret	b35148d75047f5f5d5be1935614a7d41
+
+    
+
+6. Have the Fitbit user authorize access for your app(C).
+
+Copy and paste this Fitbit authorization page in your browser so the user can grant access to your app. This URL contains your Temporary Access Token, so Fitbit will know who Fitbit user grants access to.
+
+    https://fitbit.com/oauth/authorize?oauth_token=181ae9806e894fb8ac31727f87603adf
+    
+Approve of access to the account
+
+This redirects to:
+    https://www.fitbit.com/oauth?oauth_token=181ae9806e894fb8ac31727f87603adf&locale=&display=&authentication=&oauth_allow=Allow&_sourcePage=rADf-92a1_7GrJMFkFsv6XbX0f6OV1Ndj1zeGcz7OKyqzpfBpGzBwTKIuNMgn5lyAHyJYxmkph5-a1BbgHUGtZFWlNDZdgrsngKh9Hbi9yU%3D&__fp=dFzAWcXglUU%3D
+
+The page displays:
+
+    You can return to DevAtelier HealthApp and enter the following PIN when requested:
+    2d290d0fa4f5aacd9b8ab78fe57f542c
+
+
+7. Extract verifier token(D)
+Once the user grants access for your app to read their data, the Fitbit authorization page will redirect the user back to your application(or whatever user you specify in your application settings in dev.fitbit.com in Callback URL field)(D). The URL will have some extra GET parameters. One of them will be verifier. You'll need this verifier later, when you request your permanent Access Token and permanent Access Token Secret.
+
+
+Get Fitbit User's permanent Access Token and Access Token Secret(E-F).
+
+
+8. Enter all required data
+
+
+Paste verify parameter that you received in the previous step. Generate a new nonce and make sure that the timestamp is up to date.
+Verifier	2d290d0fa4f5aacd9b8ab78fe57f542c
+Nonce(any random string):	random
+Timestamp:	1429395924
+
+
+9.Compare that your code generates the same signature as below
+
+Please compare the signature your code generates with the signature below. Since the signature is dependent on your client (consumer) secret + access token secret and base string, please make sure that the base string that your code generates is the same as below.
+
+Base string:	POST&https%3A%2F%2Fapi.fitbit.com%2Foauth%2Faccess_token&oauth_consumer_key%3D6cf4162a72ac4a4382c098caec132782%26oauth_nonce%3Drandom%26oauth_signature_method%3DHMAC-SHA1%26oauth_timestamp%3D1429395924%26oauth_token%3D181ae9806e894fb8ac31727f87603adf%26oauth_verifier%3D2d290d0fa4f5aacd9b8ab78fe57f542c%26oauth_version%3D1.0
+                Client (Consumer) Secret         Temporary Access Token Secret
+Signed with:	c652d5fb28f344679f3b6b12121465af&b35148d75047f5f5d5be1935614a7d41
+Signature:	POCgKIPz4OPb1bCXLpgTNogdGdU=
+
+
+
+10. Execute this command(UNIX only)(E)
+
+Below is an example of a valid request for your permanent access_token. Please beware that the timestamp should be very close to the current time, otherwise you'll get an unauthorized response saying that you need to provide a valid timestamp. Once you execute this request, you should get a valid response that contains the permanent Access Token and Access Token Secret for the user that your application can use to make API requests(F). Make sure to store these tokens so for reuse later
+    
+$ curl -X POST -i -H 'Authorization: OAuth oauth_consumer_key="6cf4162a72ac4a4382c098caec132782", oauth_nonce="random", oauth_signature="POCgKIPz4OPb1bCXLpgTNogdGdU%3D", oauth_signature_method="HMAC-SHA1", oauth_timestamp="1429395924", oauth_token="181ae9806e894fb8ac31727f87603adf", oauth_verifier="2d290d0fa4f5aacd9b8ab78fe57f542c", oauth_version="1.0"' https://api.fitbit.com/oauth/access_token
+    HTTP/1.1 200 OK
+    Server: nginx
+    X-UA-Compatible: IE=edge,chrome=1
+    Expires: Thu, 01 Jan 1970 00:00:00 GMT
+    Cache-control: no-store, no-cache, must-revalidate
+    Pragma: no-cache
+    Set-Cookie: fhttps=""; Expires=Thu, 01-Jan-1970 00:00:10 GMT; Path=/
+    Content-Type: application/x-www-form-urlencoded;charset=UTF-8
+    Content-Language: en-US
+    Content-Length: 119
+    Date: Sat, 18 Apr 2015 22:28:29 GMT
+    
+    oauth_token=5a3ca2edf91d7175cad30bc3533e3c8a&oauth_token_secret=da5bc974d697470a93ec59e9cfaee06d&encoded_user_id=3BRQLQ
+
+  
+
+Make an API Request(G).
+
+Access Token:	5a3ca2edf91d7175cad30bc3533e3c8a
+Access Token Secret:	da5bc974d697470a93ec59e9cfaee06d
+Request URL:	https://api.fitbit.com/1/user/-/profile.json
+Nonce(any random string):	random
+Timestamp:	1429396457
+Type:	GET
+
+
+API request values to verify
+Base string:	GET&https%3A%2F%2Fapi.fitbit.com%2F1%2Fuser%2F-%2Fprofile.json&oauth_consumer_key%3D6cf4162a72ac4a4382c098caec132782%26oauth_nonce%3Drandom%26oauth_signature_method%3DHMAC-SHA1%26oauth_timestamp%3D1429396457%26oauth_token%3D5a3ca2edf91d7175cad30bc3533e3c8a%26oauth_version%3D1.0
+Signed with:	c652d5fb28f344679f3b6b12121465af&da5bc974d697470a93ec59e9cfaee06d
+Signature:	c2wi9Xk+nOGpjRoyxtotIM5AyA4=    
+
+
+API request CURL:
+
+$ curl -X GET -i -H 'Authorization: OAuth oauth_consumer_key="6cf4162a72ac4a4382c098caec132782", oauth_nonce="random", oauth_signature="c2wi9Xk%2BnOGpjRoyxtotIM5AyA4%3D", oauth_signature_method="HMAC-SHA1", oauth_timestamp="1429396457", oauth_token="5a3ca2edf91d7175cad30bc3533e3c8a", oauth_version="1.0"' https://api.fitbit.com/1/user/-/profile.json
+
+HTTP/1.1 200 OK
+Server: nginx
+X-UA-Compatible: IE=edge,chrome=1
+Expires: Thu, 01 Jan 1970 00:00:00 GMT
+Cache-control: no-cache, must-revalidate
+Pragma: no-cache
+Fitbit-Rate-Limit-Limit: 150
+Fitbit-Rate-Limit-Remaining: 149
+Fitbit-Rate-Limit-Reset: 1478
+Set-Cookie: JSESSIONID=5D7EA76F7CB0C45BF1A7A020C9BAC55B.fitbit1; Path=/; HttpOnly
+Content-Type: application/json;charset=UTF-8
+Content-Language: en
+Content-Length: 657
+Vary: Accept-Encoding
+Date: Sat, 18 Apr 2015 22:35:21 GMT
+    
+{"user":{"avatar":"http://www.fitbit.com/images/profile/defaultProfile_100_male.gif","avatar150":"http://www.fitbit.com/images/profile/defaultProfile_150_male.gif","country":"US","dateOfBirth":"","displayName":"","distanceUnit":"en_US","encodedId":"3BRQLQ","foodsLocale":"en_US","gender":"NA","glucoseUnit":"en_US","height":0,"heightUnit":"en_US","locale":"en_US","memberSince":"2015-04-02","offsetFromUTCMillis":-25200000,"startDayOfWeek":"SUNDAY","strideLengthRunning":86.60000000000001,"strideLengthWalking":67.10000000000001,"timezone":"America/Los_Angeles","topBadges":[],"waterUnit":"en_US","waterUnitName":"fl oz","weight":62.5,"weightUnit":"en_US"}}

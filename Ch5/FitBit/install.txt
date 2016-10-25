@@ -1,0 +1,61 @@
+https://dev.fitbit.com/docs/oauth2/
+
+
+The Authorization Code Grant flow has the following steps:
+
+Your application redirects the user to Fitbit's authorization page. See Authorization Page below.
+
+Upon user consent, Fitbit redirects the user back to your application's callback URL with an authorization code as a URL parameter.
+Your application exchanges the authorization code for an access token and refresh token. See Access Token Request below.
+Your application stores the access token and refresh token. It will use the access token to make requests to the Fitbit API. It will use the refresh token to obtain a new access token when the access token expires without having to re-prompt the user. (More information on the refresh token is below in the "Refreshing Tokens" section.)
+
+
+
+
+
+For the OAuth 2.0 API we will use the AeroGear framework. The AeroGear GitHub page can be found here:
+
+https://github.com/aerogear/aerogear-ios-oauth2
+
+
+
+
+You can install the SDK manually into your project, which is bit more work; the easiest way is to install a dependency manager that will allow us to install the SDK on our Mac, such as Cocoapods or Carthage.
+The easiest way is to use cocoapods:
+
+sudo gem install cocoapods
+pod init FitBit.xcodeproj
+
+The first command is run with root privileges to install Cocoapods, then as the regular user, the second command will create a file called Podfile. Use a text editor or vim to edit the Podfile file and add AeroGear support:
+
+target 'FitBit' do
+    pod 'AeroGearOAuth2'
+end
+
+
+Now you can install the AeroGear Libraries in your project (Listing 5-1):
+
+Listing 5-1. Installing the AeroGear Libraries in your project
+
+$ pod install
+Updating local specs repositories
+Analyzing dependencies
+Downloading dependencies
+Installing AeroGearHttp (0.4.1)
+Installing AeroGearOAuth2 (0.4.0)
+Generating Pods project
+Integrating client project
+
+[!] Please close any current Xcode sessions and use `FitBit.xcworkspace` for this project from now on.
+Sending stats
+Pod installation complete! There is 1 dependency from the Podfile and 2 total pods installed.
+
+
+Follow the suggestion of the installer: close your XCode project, and open instead the FitBit.xcworkspace project.
+
+
+
+
+https://localhost/oauth2Callback
+
+

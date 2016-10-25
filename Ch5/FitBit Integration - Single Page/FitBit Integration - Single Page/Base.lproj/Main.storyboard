@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="FitBit_Integration___Single_Page" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1WB-0c-yjM">
+                                <rect key="frame" x="180" y="88" width="240" height="30"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="tyA-ur-q5F"/>
+                                </constraints>
+                                <state key="normal" title="Good Request">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="clickButton" destination="BYZ-38-t0r" eventType="touchDown" id="vN4-Th-CnY"/>
+                                    <action selector="unclickButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="9Pd-r3-2jf"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" indicatorStyle="black" text="TEXT" translatesAutoresizingMaskIntoConstraints="NO" id="BUG-iJ-k6P">
+                                <rect key="frame" x="21" y="203" width="558" height="346"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="0.14000000000000001" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tlk-ta-7Iv">
+                                <rect key="frame" x="180" y="120" width="240" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Bad Request">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="clickButton2" destination="BYZ-38-t0r" eventType="touchDown" id="tKv-o9-BMh"/>
+                                    <action selector="unclickButton2" destination="BYZ-38-t0r" eventType="touchUpInside" id="I2k-Z5-Kvh"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eXe-Wn-8o3">
+                                <rect key="frame" x="267" y="20" width="67" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Clear Log">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="clickClearButton" destination="BYZ-38-t0r" eventType="touchDown" id="9pf-dh-wo0"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="BUG-iJ-k6P" firstAttribute="centerX" secondItem="Tlk-ta-7Iv" secondAttribute="centerX" id="1Ur-bg-35p"/>
+                            <constraint firstItem="Tlk-ta-7Iv" firstAttribute="top" secondItem="1WB-0c-yjM" secondAttribute="bottom" constant="2" id="36e-0w-7vc"/>
+                            <constraint firstItem="Tlk-ta-7Iv" firstAttribute="trailing" secondItem="1WB-0c-yjM" secondAttribute="trailing" id="3Fc-Aa-cUz"/>
+                            <constraint firstItem="Tlk-ta-7Iv" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3Wc-Ms-bFI"/>
+                            <constraint firstItem="Tlk-ta-7Iv" firstAttribute="leading" secondItem="1WB-0c-yjM" secondAttribute="leading" id="8th-yr-gec"/>
+                            <constraint firstItem="1WB-0c-yjM" firstAttribute="centerX" secondItem="eXe-Wn-8o3" secondAttribute="centerX" id="UTi-Tv-reN"/>
+                            <constraint firstItem="Tlk-ta-7Iv" firstAttribute="top" secondItem="eXe-Wn-8o3" secondAttribute="bottom" constant="70" id="XNk-v3-rFU"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="BUG-iJ-k6P" secondAttribute="bottom" constant="51" id="Xta-S5-fct"/>
+                            <constraint firstItem="BUG-iJ-k6P" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="5" id="bKR-fd-KGz"/>
+                            <constraint firstItem="1WB-0c-yjM" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="68" id="om6-im-kcp"/>
+                            <constraint firstItem="BUG-iJ-k6P" firstAttribute="top" secondItem="Tlk-ta-7Iv" secondAttribute="bottom" constant="53" id="pAC-5I-ljK"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="clearButton" destination="eXe-Wn-8o3" id="5rq-7h-FEk"/>
+                        <outlet property="labelButton" destination="1WB-0c-yjM" id="yWO-qz-deg"/>
+                        <outlet property="labelButton2" destination="Tlk-ta-7Iv" id="Dv3-4A-CG9"/>
+                        <outlet property="textArea" destination="BUG-iJ-k6P" id="dbF-2I-BAC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="567" y="358"/>
+        </scene>
+    </scenes>
+</document>
