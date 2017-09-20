@@ -1,0 +1,461 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E4D4DC4E1AFFD1B00079443B /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D4DC4D1AFFD1B00079443B /* CustomButton.swift */; };
+		E4F740911AEBF22E008873ED /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F740901AEBF22E008873ED /* AppDelegate.swift */; };
+		E4F740931AEBF22E008873ED /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F740921AEBF22E008873ED /* MainViewController.swift */; };
+		E4F740961AEBF22E008873ED /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4F740941AEBF22E008873ED /* Main.storyboard */; };
+		E4F740981AEBF22E008873ED /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E4F740971AEBF22E008873ED /* Images.xcassets */; };
+		E4F7409B1AEBF22E008873ED /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = E4F740991AEBF22E008873ED /* LaunchScreen.xib */; };
+		E4F740A71AEBF22E008873ED /* CBTransferAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F740A61AEBF22E008873ED /* CBTransferAppTests.swift */; };
+		E4F740B11AEC17BF008873ED /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F740B01AEC17BF008873ED /* Const.swift */; };
+		E4F740B31AEC6AE8008873ED /* CentralViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F740B21AEC6AE8008873ED /* CentralViewController.swift */; };
+		E4F740B51AEC75D7008873ED /* TransferServiceScanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F740B41AEC75D7008873ED /* TransferServiceScanner.swift */; };
+		E4F740B71AED6D34008873ED /* PeripheralViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F740B61AED6D34008873ED /* PeripheralViewController.swift */; };
+		E4F740B91AED775D008873ED /* TransferService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F740B81AED775D008873ED /* TransferService.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E4F740A11AEBF22E008873ED /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E4F740831AEBF22E008873ED /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E4F7408A1AEBF22E008873ED;
+			remoteInfo = CBTransferApp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		E4D4DC4D1AFFD1B00079443B /* CustomButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		E4F7408B1AEBF22E008873ED /* CBTransferApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CBTransferApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E4F7408F1AEBF22E008873ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E4F740901AEBF22E008873ED /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		E4F740921AEBF22E008873ED /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		E4F740951AEBF22E008873ED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		E4F740971AEBF22E008873ED /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		E4F7409A1AEBF22E008873ED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		E4F740A01AEBF22E008873ED /* CBTransferAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CBTransferAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E4F740A51AEBF22E008873ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E4F740A61AEBF22E008873ED /* CBTransferAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CBTransferAppTests.swift; sourceTree = "<group>"; };
+		E4F740B01AEC17BF008873ED /* Const.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
+		E4F740B21AEC6AE8008873ED /* CentralViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CentralViewController.swift; sourceTree = "<group>"; };
+		E4F740B41AEC75D7008873ED /* TransferServiceScanner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransferServiceScanner.swift; sourceTree = "<group>"; };
+		E4F740B61AED6D34008873ED /* PeripheralViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeripheralViewController.swift; sourceTree = "<group>"; };
+		E4F740B81AED775D008873ED /* TransferService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransferService.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E4F740881AEBF22E008873ED /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E4F7409D1AEBF22E008873ED /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E4F740821AEBF22E008873ED = {
+			isa = PBXGroup;
+			children = (
+				E4F7408D1AEBF22E008873ED /* CBTransferApp */,
+				E4F740A31AEBF22E008873ED /* CBTransferAppTests */,
+				E4F7408C1AEBF22E008873ED /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E4F7408C1AEBF22E008873ED /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E4F7408B1AEBF22E008873ED /* CBTransferApp.app */,
+				E4F740A01AEBF22E008873ED /* CBTransferAppTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E4F7408D1AEBF22E008873ED /* CBTransferApp */ = {
+			isa = PBXGroup;
+			children = (
+				E4F740921AEBF22E008873ED /* MainViewController.swift */,
+				E4F740B21AEC6AE8008873ED /* CentralViewController.swift */,
+				E4F740B61AED6D34008873ED /* PeripheralViewController.swift */,
+				E4F740B41AEC75D7008873ED /* TransferServiceScanner.swift */,
+				E4F740B81AED775D008873ED /* TransferService.swift */,
+				E4D4DC4D1AFFD1B00079443B /* CustomButton.swift */,
+				E4F740B01AEC17BF008873ED /* Const.swift */,
+				E4F740941AEBF22E008873ED /* Main.storyboard */,
+				E4F7408E1AEBF22E008873ED /* Supporting Files */,
+			);
+			path = CBTransferApp;
+			sourceTree = "<group>";
+		};
+		E4F7408E1AEBF22E008873ED /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E4F740901AEBF22E008873ED /* AppDelegate.swift */,
+				E4F740991AEBF22E008873ED /* LaunchScreen.xib */,
+				E4F740971AEBF22E008873ED /* Images.xcassets */,
+				E4F7408F1AEBF22E008873ED /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E4F740A31AEBF22E008873ED /* CBTransferAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				E4F740A61AEBF22E008873ED /* CBTransferAppTests.swift */,
+				E4F740A41AEBF22E008873ED /* Supporting Files */,
+			);
+			path = CBTransferAppTests;
+			sourceTree = "<group>";
+		};
+		E4F740A41AEBF22E008873ED /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E4F740A51AEBF22E008873ED /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E4F7408A1AEBF22E008873ED /* CBTransferApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E4F740AA1AEBF22E008873ED /* Build configuration list for PBXNativeTarget "CBTransferApp" */;
+			buildPhases = (
+				E4F740871AEBF22E008873ED /* Sources */,
+				E4F740881AEBF22E008873ED /* Frameworks */,
+				E4F740891AEBF22E008873ED /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CBTransferApp;
+			productName = CBTransferApp;
+			productReference = E4F7408B1AEBF22E008873ED /* CBTransferApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		E4F7409F1AEBF22E008873ED /* CBTransferAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E4F740AD1AEBF22E008873ED /* Build configuration list for PBXNativeTarget "CBTransferAppTests" */;
+			buildPhases = (
+				E4F7409C1AEBF22E008873ED /* Sources */,
+				E4F7409D1AEBF22E008873ED /* Frameworks */,
+				E4F7409E1AEBF22E008873ED /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E4F740A21AEBF22E008873ED /* PBXTargetDependency */,
+			);
+			name = CBTransferAppTests;
+			productName = CBTransferAppTests;
+			productReference = E4F740A01AEBF22E008873ED /* CBTransferAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E4F740831AEBF22E008873ED /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftMigration = 0710;
+				LastSwiftUpdateCheck = 0710;
+				LastUpgradeCheck = 0710;
+				ORGANIZATIONNAME = mdltorriente;
+				TargetAttributes = {
+					E4F7408A1AEBF22E008873ED = {
+						CreatedOnToolsVersion = 6.3.1;
+					};
+					E4F7409F1AEBF22E008873ED = {
+						CreatedOnToolsVersion = 6.3.1;
+						TestTargetID = E4F7408A1AEBF22E008873ED;
+					};
+				};
+			};
+			buildConfigurationList = E4F740861AEBF22E008873ED /* Build configuration list for PBXProject "CBTransferApp" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E4F740821AEBF22E008873ED;
+			productRefGroup = E4F7408C1AEBF22E008873ED /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E4F7408A1AEBF22E008873ED /* CBTransferApp */,
+				E4F7409F1AEBF22E008873ED /* CBTransferAppTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E4F740891AEBF22E008873ED /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E4F740961AEBF22E008873ED /* Main.storyboard in Resources */,
+				E4F7409B1AEBF22E008873ED /* LaunchScreen.xib in Resources */,
+				E4F740981AEBF22E008873ED /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E4F7409E1AEBF22E008873ED /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E4F740871AEBF22E008873ED /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E4F740931AEBF22E008873ED /* MainViewController.swift in Sources */,
+				E4F740911AEBF22E008873ED /* AppDelegate.swift in Sources */,
+				E4F740B31AEC6AE8008873ED /* CentralViewController.swift in Sources */,
+				E4F740B11AEC17BF008873ED /* Const.swift in Sources */,
+				E4D4DC4E1AFFD1B00079443B /* CustomButton.swift in Sources */,
+				E4F740B71AED6D34008873ED /* PeripheralViewController.swift in Sources */,
+				E4F740B51AEC75D7008873ED /* TransferServiceScanner.swift in Sources */,
+				E4F740B91AED775D008873ED /* TransferService.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E4F7409C1AEBF22E008873ED /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E4F740A71AEBF22E008873ED /* CBTransferAppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E4F740A21AEBF22E008873ED /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E4F7408A1AEBF22E008873ED /* CBTransferApp */;
+			targetProxy = E4F740A11AEBF22E008873ED /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		E4F740941AEBF22E008873ED /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E4F740951AEBF22E008873ED /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		E4F740991AEBF22E008873ED /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E4F7409A1AEBF22E008873ED /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E4F740A81AEBF22E008873ED /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E4F740A91AEBF22E008873ED /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E4F740AB1AEBF22E008873ED /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = CBTransferApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.mdltorriente.labs.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		E4F740AC1AEBF22E008873ED /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = CBTransferApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.mdltorriente.labs.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		E4F740AE1AEBF22E008873ED /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = CBTransferAppTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.mdltorriente.labs.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CBTransferApp.app/CBTransferApp";
+			};
+			name = Debug;
+		};
+		E4F740AF1AEBF22E008873ED /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = CBTransferAppTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.mdltorriente.labs.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CBTransferApp.app/CBTransferApp";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E4F740861AEBF22E008873ED /* Build configuration list for PBXProject "CBTransferApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E4F740A81AEBF22E008873ED /* Debug */,
+				E4F740A91AEBF22E008873ED /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E4F740AA1AEBF22E008873ED /* Build configuration list for PBXNativeTarget "CBTransferApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E4F740AB1AEBF22E008873ED /* Debug */,
+				E4F740AC1AEBF22E008873ED /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E4F740AD1AEBF22E008873ED /* Build configuration list for PBXNativeTarget "CBTransferAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E4F740AE1AEBF22E008873ED /* Debug */,
+				E4F740AF1AEBF22E008873ED /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E4F740831AEBF22E008873ED /* Project object */;
+}

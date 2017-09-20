@@ -1,0 +1,20 @@
+/* 
+  Localizable.strings
+  iBeaconApp
+
+  Copyright (c) 2015 mdltorriente. All rights reserved.
+*/
+
+/* Region Monitoring */
+"regmon.alert.title.location-access-disabled" = "Background Location Access is Disabled";
+
+"regmon.alert.message.location-access-disabled" = "Please change the location access to \"Always\" in app setttings.";
+
+/* iBeacon */
+"transmit.help.proximityUUID" = "The proximity ID of the beacon being targeted. This value must not be nil.";
+
+"transmit.help.major" = "The major value that you use to identify one or more beacons.";
+
+"transmit.help.minor" = "The minor value that you use to identify a specific beacon.";
+
+"transmit.help.measuredPower" = "Measured Power: The received signal strength indicator (RSSI) value (measured in decibels) for the device. This value represents the measured strength of the beacon from one meter away and is used during ranging. Power values are typically negative numbers, for exampe a value of around -35 is a considered a very strong signal (proximity of immediate).";

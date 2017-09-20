@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>7C8B57EA-0981-45D0-9DD0-3EF703A28AE1</string>
+	<key>IDESourceControlProjectName</key>
+	<string>CBTransferApp</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>90887A9F6DC548DC15B2C100629502572FFE53F9</key>
+		<string>https://bitbucket.org/mdltorriente/book-chapter-10.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>CBTransferApp.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>90887A9F6DC548DC15B2C100629502572FFE53F9</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://bitbucket.org/mdltorriente/book-chapter-10.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>90887A9F6DC548DC15B2C100629502572FFE53F9</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>90887A9F6DC548DC15B2C100629502572FFE53F9</string>
+			<key>IDESourceControlWCCName</key>
+			<string>CBTransferApp</string>
+		</dict>
+	</array>
+</dict>
+</plist>
