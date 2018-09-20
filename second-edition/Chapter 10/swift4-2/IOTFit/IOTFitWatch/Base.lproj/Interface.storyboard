@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="14113" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+    <device id="watch38" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="watchOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="14033"/>
+    </dependencies>
+    <scenes>
+        <!--Interface Controller-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="IOTFitWatch" customModuleProvider="target">
+                    <items>
+                        <table alignment="left" id="a4k-l7-h9j">
+                            <items>
+                                <tableRow identifier="WorkoutRow" id="rA6-8Q-kPl" customClass="WorkoutRowController" customModule="IOTFitWatch_Extension">
+                                    <group key="rootItem" width="1" height="50" alignment="left" id="QxY-57-MIj">
+                                        <items>
+                                            <group width="40" height="1" alignment="left" id="Edu-73-9Ss">
+                                                <items>
+                                                    <imageView alignment="left" id="C42-5G-7RG"/>
+                                                </items>
+                                            </group>
+                                            <group width="90" height="1" alignment="left" layout="vertical" id="mzR-ph-M4e">
+                                                <items>
+                                                    <label alignment="left" text="Label" id="5Z7-iD-kGK">
+                                                        <fontDescription key="font" style="UICTFontTextStyleSubhead"/>
+                                                    </label>
+                                                    <label alignment="left" text="Label" id="ax2-du-kX7"/>
+                                                </items>
+                                            </group>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <outlet property="dateLabel" destination="5Z7-iD-kGK" id="Zvt-Qf-E0b"/>
+                                        <outlet property="durationLabel" destination="ax2-du-kX7" id="2Dc-aG-9gw"/>
+                                        <outlet property="icon" destination="C42-5G-7RG" id="NQi-6M-y15"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                    </items>
+                    <menu key="menu" id="PId-pR-xml">
+                        <items>
+                            <menuItem title="New Workout" icon="add" id="JTF-LF-6g7">
+                                <connections>
+                                    <action selector="presentRecordInterface" destination="AgC-eL-Hgc" id="9Vr-2f-jP9"/>
+                                </connections>
+                            </menuItem>
+                        </items>
+                    </menu>
+                    <connections>
+                        <outlet property="workoutTable" destination="a4k-l7-h9j" id="bkn-vh-nzt"/>
+                    </connections>
+                </controller>
+            </objects>
+        </scene>
+        <!--RecordInterfaceController-->
+        <scene sceneID="E6o-0q-sLp">
+            <objects>
+                <controller identifier="RecordInterfaceController" id="Avm-sv-5fn" customClass="RecordInterfaceController" customModule="IOTFitWatch_Extension">
+                    <items>
+                        <group width="1" height="145" alignment="left" layout="vertical" id="yCl-wH-i0N">
+                            <items>
+                                <label width="136" alignment="left" text="Current Workout" textAlignment="center" id="iDz-XC-Rm0"/>
+                                <label width="136" alignment="left" text="59m 59s" textAlignment="center" id="Ox1-4X-OLy">
+                                    <fontDescription key="font" style="UICTFontTextStyleHeadline"/>
+                                </label>
+                                <label width="1" alignment="left" text="0.00 m | 0 steps" textAlignment="center" minimumScaleFactor="0.5" id="I6q-2k-q49"/>
+                                <button width="1" alignment="left" title="Start" id="NA6-kv-Dl6">
+                                    <color key="backgroundColor" red="0.37554333470000001" green="0.67121127830000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <connections>
+                                        <action selector="toggleWorkout" destination="Avm-sv-5fn" id="OnL-dO-jGz"/>
+                                    </connections>
+                                </button>
+                                <button width="1" alignment="left" title="Exit" id="Jv5-TH-OJk">
+                                    <color key="backgroundColor" red="0.97261899709999999" green="0.4135021934" blue="0.38300274779999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <connections>
+                                        <action selector="exit" destination="Avm-sv-5fn" id="M5i-00-0Pc"/>
+                                    </connections>
+                                </button>
+                            </items>
+                        </group>
+                    </items>
+                    <connections>
+                        <outlet property="exitButton" destination="Jv5-TH-OJk" id="6ab-Qr-kUM"/>
+                        <outlet property="progressLabel" destination="I6q-2k-q49" id="Z9C-QQ-s5x"/>
+                        <outlet property="timeLabel" destination="Ox1-4X-OLy" id="RUh-0X-8nk"/>
+                        <outlet property="toggleButton" destination="NA6-kv-Dl6" id="TFp-Kb-4fF"/>
+                        <outlet property="workoutLabel" destination="iDz-XC-Rm0" id="OT6-7E-iNw"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="292" y="89"/>
+        </scene>
+    </scenes>
+</document>
