@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="SecurityView" customModule="IOTFit" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Verfication Required" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vMK-C8-g9M">
+                    <rect key="frame" x="40" y="80" width="295" height="35"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="35" id="kaG-Ri-g6m"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uL2-Ei-M3q">
+                    <rect key="frame" x="147" y="318.5" width="82" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="Zi2-zh-MdK"/>
+                    </constraints>
+                    <state key="normal" title="Use Face ID"/>
+                    <connections>
+                        <action selector="validateBiometricsWithSender:" destination="iN0-l3-epB" eventType="touchUpInside" id="Ch4-uj-mBV"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="or" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cKs-RC-JQT">
+                    <rect key="frame" x="180" y="285.5" width="16" height="25"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="25" id="yjW-pa-j1m"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This screen contains sensitive user data. Please use your password or biometrics to unlock this screen." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="amh-lF-tOH">
+                    <rect key="frame" x="40" y="155" width="295" height="52"/>
+                    <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CZR-ul-2L4">
+                    <rect key="frame" x="97.5" y="247.5" width="180" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="180" id="5Eq-Yy-zeu"/>
+                        <constraint firstAttribute="height" constant="30" id="vTp-ba-pZA"/>
+                    </constraints>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                    <textInputTraits key="textInputTraits"/>
+                    <connections>
+                        <outlet property="delegate" destination="iN0-l3-epB" id="3qa-2J-wns"/>
+                    </connections>
+                </textField>
+            </subviews>
+            <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="uL2-Ei-M3q" firstAttribute="top" secondItem="cKs-RC-JQT" secondAttribute="bottom" constant="8" id="6Fz-f5-Bzm"/>
+                <constraint firstItem="amh-lF-tOH" firstAttribute="top" secondItem="vMK-C8-g9M" secondAttribute="bottom" constant="40" id="7JW-GW-0DR"/>
+                <constraint firstItem="cKs-RC-JQT" firstAttribute="top" secondItem="CZR-ul-2L4" secondAttribute="bottom" constant="8" id="7ye-0I-ojC"/>
+                <constraint firstAttribute="trailing" secondItem="vMK-C8-g9M" secondAttribute="trailing" constant="40" id="8IE-AC-0to"/>
+                <constraint firstItem="amh-lF-tOH" firstAttribute="centerX" secondItem="vMK-C8-g9M" secondAttribute="centerX" id="Bro-Pa-GTp"/>
+                <constraint firstItem="CZR-ul-2L4" firstAttribute="top" secondItem="amh-lF-tOH" secondAttribute="bottom" constant="40" id="NyS-CC-khb"/>
+                <constraint firstItem="vMK-C8-g9M" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="40" id="SCO-r6-drL"/>
+                <constraint firstItem="vMK-C8-g9M" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="60" id="Wla-Lp-28j"/>
+                <constraint firstItem="CZR-ul-2L4" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="ZoU-Py-RHp"/>
+                <constraint firstItem="uL2-Ei-M3q" firstAttribute="centerX" secondItem="vMK-C8-g9M" secondAttribute="centerX" id="k3C-ZI-oga"/>
+                <constraint firstItem="cKs-RC-JQT" firstAttribute="centerX" secondItem="vMK-C8-g9M" secondAttribute="centerX" id="lpP-Is-hou"/>
+                <constraint firstItem="amh-lF-tOH" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="vMK-C8-g9M" secondAttribute="trailing" id="ps0-wh-CbH"/>
+                <constraint firstItem="amh-lF-tOH" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="vMK-C8-g9M" secondAttribute="leading" id="wPR-cQ-K1a"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="passwordTextField" destination="CZR-ul-2L4" id="FyA-S3-G0f"/>
+                <outlet property="unlockButton" destination="uL2-Ei-M3q" id="8un-aS-W2P"/>
+            </connections>
+            <point key="canvasLocation" x="33.5" y="100.5"/>
+        </view>
+    </objects>
+</document>

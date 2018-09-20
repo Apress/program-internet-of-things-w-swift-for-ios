@@ -1,0 +1,821 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		874754D521325CBD0009AC77 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 874754D421325CBD0009AC77 /* NetworkManager.swift */; };
+		875828DE21330E69003A7F44 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 875828DD21330E69003A7F44 /* AppDelegate.swift */; };
+		875828E021330E69003A7F44 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 875828DF21330E69003A7F44 /* ViewController.swift */; };
+		875828E321330E69003A7F44 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 875828E121330E69003A7F44 /* Main.storyboard */; };
+		875828E521330E6E003A7F44 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 875828E421330E6E003A7F44 /* Assets.xcassets */; };
+		875828F021330E6E003A7F44 /* IOTHomeTVTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 875828EF21330E6E003A7F44 /* IOTHomeTVTests.swift */; };
+		875828FB21330E6E003A7F44 /* IOTHomeTVUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 875828FA21330E6E003A7F44 /* IOTHomeTVUITests.swift */; };
+		87582906213317B4003A7F44 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 874754D421325CBD0009AC77 /* NetworkManager.swift */; };
+		875829342135FD99003A7F44 /* FontAwesomeTabBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 875829252135FD93003A7F44 /* FontAwesomeTabBarItem.swift */; };
+		875829352135FD99003A7F44 /* FontAwesomeTabBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 875829252135FD93003A7F44 /* FontAwesomeTabBarItem.swift */; };
+		875829362135FD99003A7F44 /* FontAwesomeImageRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 875829262135FD93003A7F44 /* FontAwesomeImageRepresentable.swift */; };
+		875829372135FD99003A7F44 /* FontAwesomeImageRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 875829262135FD93003A7F44 /* FontAwesomeImageRepresentable.swift */; };
+		875829382135FD99003A7F44 /* FontAwesome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 875829272135FD93003A7F44 /* FontAwesome.swift */; };
+		875829392135FD99003A7F44 /* FontAwesome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 875829272135FD93003A7F44 /* FontAwesome.swift */; };
+		8758293A2135FD99003A7F44 /* Font-Awesome-5-Brands-Regular-400.otf in Resources */ = {isa = PBXBuildFile; fileRef = 875829282135FD94003A7F44 /* Font-Awesome-5-Brands-Regular-400.otf */; };
+		8758293B2135FD99003A7F44 /* Font-Awesome-5-Brands-Regular-400.otf in Resources */ = {isa = PBXBuildFile; fileRef = 875829282135FD94003A7F44 /* Font-Awesome-5-Brands-Regular-400.otf */; };
+		8758293C2135FD99003A7F44 /* Font-Awesome-5-Free-Solid-900.otf in Resources */ = {isa = PBXBuildFile; fileRef = 875829292135FD94003A7F44 /* Font-Awesome-5-Free-Solid-900.otf */; };
+		8758293D2135FD99003A7F44 /* Font-Awesome-5-Free-Solid-900.otf in Resources */ = {isa = PBXBuildFile; fileRef = 875829292135FD94003A7F44 /* Font-Awesome-5-Free-Solid-900.otf */; };
+		8758293E2135FD99003A7F44 /* FontAwesomeExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8758292A2135FD95003A7F44 /* FontAwesomeExtension.swift */; };
+		8758293F2135FD99003A7F44 /* FontAwesomeExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8758292A2135FD95003A7F44 /* FontAwesomeExtension.swift */; };
+		875829402135FD99003A7F44 /* FontAwesomeSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8758292B2135FD95003A7F44 /* FontAwesomeSegmentedControl.swift */; };
+		875829412135FD99003A7F44 /* FontAwesomeSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8758292B2135FD95003A7F44 /* FontAwesomeSegmentedControl.swift */; };
+		875829422135FD99003A7F44 /* FontAwesomeStateRequirement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8758292C2135FD96003A7F44 /* FontAwesomeStateRequirement.swift */; };
+		875829432135FD99003A7F44 /* FontAwesomeStateRequirement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8758292C2135FD96003A7F44 /* FontAwesomeStateRequirement.swift */; };
+		875829442135FD99003A7F44 /* Enum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8758292D2135FD96003A7F44 /* Enum.swift */; };
+		875829452135FD99003A7F44 /* Enum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8758292D2135FD96003A7F44 /* Enum.swift */; };
+		875829462135FD99003A7F44 /* FontAwesomeBarButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8758292E2135FD96003A7F44 /* FontAwesomeBarButtonItem.swift */; };
+		875829472135FD99003A7F44 /* FontAwesomeBarButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8758292E2135FD96003A7F44 /* FontAwesomeBarButtonItem.swift */; };
+		875829482135FD99003A7F44 /* FontAwesomeImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8758292F2135FD97003A7F44 /* FontAwesomeImageView.swift */; };
+		875829492135FD99003A7F44 /* FontAwesomeImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8758292F2135FD97003A7F44 /* FontAwesomeImageView.swift */; };
+		8758294A2135FD99003A7F44 /* FontAwesomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 875829302135FD97003A7F44 /* FontAwesomeView.swift */; };
+		8758294B2135FD99003A7F44 /* FontAwesomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 875829302135FD97003A7F44 /* FontAwesomeView.swift */; };
+		8758294C2135FD99003A7F44 /* Font-Awesome-5-Free-Regular-400.otf in Resources */ = {isa = PBXBuildFile; fileRef = 875829322135FD98003A7F44 /* Font-Awesome-5-Free-Regular-400.otf */; };
+		8758294D2135FD99003A7F44 /* Font-Awesome-5-Free-Regular-400.otf in Resources */ = {isa = PBXBuildFile; fileRef = 875829322135FD98003A7F44 /* Font-Awesome-5-Free-Regular-400.otf */; };
+		8758294E2135FD99003A7F44 /* FontAwesomeTextRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 875829332135FD99003A7F44 /* FontAwesomeTextRepresentable.swift */; };
+		8758294F2135FD99003A7F44 /* FontAwesomeTextRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 875829332135FD99003A7F44 /* FontAwesomeTextRepresentable.swift */; };
+		87A5894B203B870800C89FCB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A5894A203B870800C89FCB /* AppDelegate.swift */; };
+		87A5894D203B870800C89FCB /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A5894C203B870800C89FCB /* HomeViewController.swift */; };
+		87A5894F203B870800C89FCB /* DoorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A5894E203B870800C89FCB /* DoorViewController.swift */; };
+		87A58952203B870800C89FCB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 87A58950203B870800C89FCB /* Main.storyboard */; };
+		87A58954203B870800C89FCB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 87A58953203B870800C89FCB /* Assets.xcassets */; };
+		87A58957203B870800C89FCB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 87A58955203B870800C89FCB /* LaunchScreen.storyboard */; };
+		87A58961203C44BC00C89FCB /* BluetoothService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A58960203C44BC00C89FCB /* BluetoothService.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		875828EC21330E6E003A7F44 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 87A5893F203B870800C89FCB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 875828DA21330E69003A7F44;
+			remoteInfo = IOTHomeTV;
+		};
+		875828F721330E6E003A7F44 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 87A5893F203B870800C89FCB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 875828DA21330E69003A7F44;
+			remoteInfo = IOTHomeTV;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		874754D421325CBD0009AC77 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		875828DB21330E69003A7F44 /* IOTHomeTV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IOTHomeTV.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		875828DD21330E69003A7F44 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		875828DF21330E69003A7F44 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		875828E221330E69003A7F44 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		875828E421330E6E003A7F44 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		875828E621330E6E003A7F44 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		875828EB21330E6E003A7F44 /* IOTHomeTVTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IOTHomeTVTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		875828EF21330E6E003A7F44 /* IOTHomeTVTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IOTHomeTVTests.swift; sourceTree = "<group>"; };
+		875828F121330E6E003A7F44 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		875828F621330E6E003A7F44 /* IOTHomeTVUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IOTHomeTVUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		875828FA21330E6E003A7F44 /* IOTHomeTVUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IOTHomeTVUITests.swift; sourceTree = "<group>"; };
+		875828FC21330E6E003A7F44 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		875829252135FD93003A7F44 /* FontAwesomeTabBarItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontAwesomeTabBarItem.swift; sourceTree = "<group>"; };
+		875829262135FD93003A7F44 /* FontAwesomeImageRepresentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontAwesomeImageRepresentable.swift; sourceTree = "<group>"; };
+		875829272135FD93003A7F44 /* FontAwesome.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontAwesome.swift; sourceTree = "<group>"; };
+		875829282135FD94003A7F44 /* Font-Awesome-5-Brands-Regular-400.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Font-Awesome-5-Brands-Regular-400.otf"; sourceTree = "<group>"; };
+		875829292135FD94003A7F44 /* Font-Awesome-5-Free-Solid-900.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Font-Awesome-5-Free-Solid-900.otf"; sourceTree = "<group>"; };
+		8758292A2135FD95003A7F44 /* FontAwesomeExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontAwesomeExtension.swift; sourceTree = "<group>"; };
+		8758292B2135FD95003A7F44 /* FontAwesomeSegmentedControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontAwesomeSegmentedControl.swift; sourceTree = "<group>"; };
+		8758292C2135FD96003A7F44 /* FontAwesomeStateRequirement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontAwesomeStateRequirement.swift; sourceTree = "<group>"; };
+		8758292D2135FD96003A7F44 /* Enum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Enum.swift; sourceTree = "<group>"; };
+		8758292E2135FD96003A7F44 /* FontAwesomeBarButtonItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontAwesomeBarButtonItem.swift; sourceTree = "<group>"; };
+		8758292F2135FD97003A7F44 /* FontAwesomeImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontAwesomeImageView.swift; sourceTree = "<group>"; };
+		875829302135FD97003A7F44 /* FontAwesomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontAwesomeView.swift; sourceTree = "<group>"; };
+		875829312135FD98003A7F44 /* FontAwesome.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FontAwesome.h; sourceTree = "<group>"; };
+		875829322135FD98003A7F44 /* Font-Awesome-5-Free-Regular-400.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Font-Awesome-5-Free-Regular-400.otf"; sourceTree = "<group>"; };
+		875829332135FD99003A7F44 /* FontAwesomeTextRepresentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontAwesomeTextRepresentable.swift; sourceTree = "<group>"; };
+		87A58947203B870800C89FCB /* IOTHome.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IOTHome.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		87A5894A203B870800C89FCB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		87A5894C203B870800C89FCB /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		87A5894E203B870800C89FCB /* DoorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoorViewController.swift; sourceTree = "<group>"; };
+		87A58951203B870800C89FCB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		87A58953203B870800C89FCB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		87A58956203B870800C89FCB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		87A58958203B870800C89FCB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		87A58960203C44BC00C89FCB /* BluetoothService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BluetoothService.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		875828D821330E69003A7F44 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		875828E821330E6E003A7F44 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		875828F321330E6E003A7F44 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		87A58944203B870800C89FCB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		875828DC21330E69003A7F44 /* IOTHomeTV */ = {
+			isa = PBXGroup;
+			children = (
+				875828DD21330E69003A7F44 /* AppDelegate.swift */,
+				875828DF21330E69003A7F44 /* ViewController.swift */,
+				875828E121330E69003A7F44 /* Main.storyboard */,
+				875828E421330E6E003A7F44 /* Assets.xcassets */,
+				875828E621330E6E003A7F44 /* Info.plist */,
+			);
+			path = IOTHomeTV;
+			sourceTree = "<group>";
+		};
+		875828EE21330E6E003A7F44 /* IOTHomeTVTests */ = {
+			isa = PBXGroup;
+			children = (
+				875828EF21330E6E003A7F44 /* IOTHomeTVTests.swift */,
+				875828F121330E6E003A7F44 /* Info.plist */,
+			);
+			path = IOTHomeTVTests;
+			sourceTree = "<group>";
+		};
+		875828F921330E6E003A7F44 /* IOTHomeTVUITests */ = {
+			isa = PBXGroup;
+			children = (
+				875828FA21330E6E003A7F44 /* IOTHomeTVUITests.swift */,
+				875828FC21330E6E003A7F44 /* Info.plist */,
+			);
+			path = IOTHomeTVUITests;
+			sourceTree = "<group>";
+		};
+		875829502135FDAF003A7F44 /* FontAwesome */ = {
+			isa = PBXGroup;
+			children = (
+				8758292D2135FD96003A7F44 /* Enum.swift */,
+				875829282135FD94003A7F44 /* Font-Awesome-5-Brands-Regular-400.otf */,
+				875829322135FD98003A7F44 /* Font-Awesome-5-Free-Regular-400.otf */,
+				875829292135FD94003A7F44 /* Font-Awesome-5-Free-Solid-900.otf */,
+				875829312135FD98003A7F44 /* FontAwesome.h */,
+				875829272135FD93003A7F44 /* FontAwesome.swift */,
+				8758292E2135FD96003A7F44 /* FontAwesomeBarButtonItem.swift */,
+				8758292A2135FD95003A7F44 /* FontAwesomeExtension.swift */,
+				875829262135FD93003A7F44 /* FontAwesomeImageRepresentable.swift */,
+				8758292F2135FD97003A7F44 /* FontAwesomeImageView.swift */,
+				8758292B2135FD95003A7F44 /* FontAwesomeSegmentedControl.swift */,
+				8758292C2135FD96003A7F44 /* FontAwesomeStateRequirement.swift */,
+				875829252135FD93003A7F44 /* FontAwesomeTabBarItem.swift */,
+				875829332135FD99003A7F44 /* FontAwesomeTextRepresentable.swift */,
+				875829302135FD97003A7F44 /* FontAwesomeView.swift */,
+			);
+			path = FontAwesome;
+			sourceTree = "<group>";
+		};
+		87A5893E203B870800C89FCB = {
+			isa = PBXGroup;
+			children = (
+				87A58949203B870800C89FCB /* IOTHome */,
+				875828DC21330E69003A7F44 /* IOTHomeTV */,
+				875828EE21330E6E003A7F44 /* IOTHomeTVTests */,
+				875828F921330E6E003A7F44 /* IOTHomeTVUITests */,
+				87A58948203B870800C89FCB /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		87A58948203B870800C89FCB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				87A58947203B870800C89FCB /* IOTHome.app */,
+				875828DB21330E69003A7F44 /* IOTHomeTV.app */,
+				875828EB21330E6E003A7F44 /* IOTHomeTVTests.xctest */,
+				875828F621330E6E003A7F44 /* IOTHomeTVUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		87A58949203B870800C89FCB /* IOTHome */ = {
+			isa = PBXGroup;
+			children = (
+				875829502135FDAF003A7F44 /* FontAwesome */,
+				87A5894A203B870800C89FCB /* AppDelegate.swift */,
+				87A5894C203B870800C89FCB /* HomeViewController.swift */,
+				87A5894E203B870800C89FCB /* DoorViewController.swift */,
+				87A58960203C44BC00C89FCB /* BluetoothService.swift */,
+				874754D421325CBD0009AC77 /* NetworkManager.swift */,
+				87A58950203B870800C89FCB /* Main.storyboard */,
+				87A58953203B870800C89FCB /* Assets.xcassets */,
+				87A58955203B870800C89FCB /* LaunchScreen.storyboard */,
+				87A58958203B870800C89FCB /* Info.plist */,
+			);
+			path = IOTHome;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		875828DA21330E69003A7F44 /* IOTHomeTV */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8758290321330E6E003A7F44 /* Build configuration list for PBXNativeTarget "IOTHomeTV" */;
+			buildPhases = (
+				875828D721330E69003A7F44 /* Sources */,
+				875828D821330E69003A7F44 /* Frameworks */,
+				875828D921330E69003A7F44 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = IOTHomeTV;
+			productName = IOTHomeTV;
+			productReference = 875828DB21330E69003A7F44 /* IOTHomeTV.app */;
+			productType = "com.apple.product-type.application";
+		};
+		875828EA21330E6E003A7F44 /* IOTHomeTVTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8758290421330E6E003A7F44 /* Build configuration list for PBXNativeTarget "IOTHomeTVTests" */;
+			buildPhases = (
+				875828E721330E6E003A7F44 /* Sources */,
+				875828E821330E6E003A7F44 /* Frameworks */,
+				875828E921330E6E003A7F44 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				875828ED21330E6E003A7F44 /* PBXTargetDependency */,
+			);
+			name = IOTHomeTVTests;
+			productName = IOTHomeTVTests;
+			productReference = 875828EB21330E6E003A7F44 /* IOTHomeTVTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		875828F521330E6E003A7F44 /* IOTHomeTVUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8758290521330E6E003A7F44 /* Build configuration list for PBXNativeTarget "IOTHomeTVUITests" */;
+			buildPhases = (
+				875828F221330E6E003A7F44 /* Sources */,
+				875828F321330E6E003A7F44 /* Frameworks */,
+				875828F421330E6E003A7F44 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				875828F821330E6E003A7F44 /* PBXTargetDependency */,
+			);
+			name = IOTHomeTVUITests;
+			productName = IOTHomeTVUITests;
+			productReference = 875828F621330E6E003A7F44 /* IOTHomeTVUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		87A58946203B870800C89FCB /* IOTHome */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 87A5895B203B870800C89FCB /* Build configuration list for PBXNativeTarget "IOTHome" */;
+			buildPhases = (
+				87A58943203B870800C89FCB /* Sources */,
+				87A58944203B870800C89FCB /* Frameworks */,
+				87A58945203B870800C89FCB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = IOTHome;
+			productName = IOTHome;
+			productReference = 87A58947203B870800C89FCB /* IOTHome.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		87A5893F203B870800C89FCB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0940;
+				LastUpgradeCheck = 1000;
+				ORGANIZATIONNAME = "Ahmed Bakir";
+				TargetAttributes = {
+					875828DA21330E69003A7F44 = {
+						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 1000;
+						ProvisioningStyle = Automatic;
+					};
+					875828EA21330E6E003A7F44 = {
+						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 1000;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 875828DA21330E69003A7F44;
+					};
+					875828F521330E6E003A7F44 = {
+						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 1000;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 875828DA21330E69003A7F44;
+					};
+					87A58946203B870800C89FCB = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
+					};
+				};
+			};
+			buildConfigurationList = 87A58942203B870800C89FCB /* Build configuration list for PBXProject "IOTHome" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 87A5893E203B870800C89FCB;
+			productRefGroup = 87A58948203B870800C89FCB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				87A58946203B870800C89FCB /* IOTHome */,
+				875828DA21330E69003A7F44 /* IOTHomeTV */,
+				875828EA21330E6E003A7F44 /* IOTHomeTVTests */,
+				875828F521330E6E003A7F44 /* IOTHomeTVUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		875828D921330E69003A7F44 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8758293D2135FD99003A7F44 /* Font-Awesome-5-Free-Solid-900.otf in Resources */,
+				8758293B2135FD99003A7F44 /* Font-Awesome-5-Brands-Regular-400.otf in Resources */,
+				875828E521330E6E003A7F44 /* Assets.xcassets in Resources */,
+				875828E321330E69003A7F44 /* Main.storyboard in Resources */,
+				8758294D2135FD99003A7F44 /* Font-Awesome-5-Free-Regular-400.otf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		875828E921330E6E003A7F44 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		875828F421330E6E003A7F44 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		87A58945203B870800C89FCB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				87A58957203B870800C89FCB /* LaunchScreen.storyboard in Resources */,
+				87A58954203B870800C89FCB /* Assets.xcassets in Resources */,
+				8758294C2135FD99003A7F44 /* Font-Awesome-5-Free-Regular-400.otf in Resources */,
+				8758293C2135FD99003A7F44 /* Font-Awesome-5-Free-Solid-900.otf in Resources */,
+				8758293A2135FD99003A7F44 /* Font-Awesome-5-Brands-Regular-400.otf in Resources */,
+				87A58952203B870800C89FCB /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		875828D721330E69003A7F44 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8758293F2135FD99003A7F44 /* FontAwesomeExtension.swift in Sources */,
+				87582906213317B4003A7F44 /* NetworkManager.swift in Sources */,
+				8758294B2135FD99003A7F44 /* FontAwesomeView.swift in Sources */,
+				875829372135FD99003A7F44 /* FontAwesomeImageRepresentable.swift in Sources */,
+				8758294F2135FD99003A7F44 /* FontAwesomeTextRepresentable.swift in Sources */,
+				875829492135FD99003A7F44 /* FontAwesomeImageView.swift in Sources */,
+				875829412135FD99003A7F44 /* FontAwesomeSegmentedControl.swift in Sources */,
+				875829352135FD99003A7F44 /* FontAwesomeTabBarItem.swift in Sources */,
+				875829432135FD99003A7F44 /* FontAwesomeStateRequirement.swift in Sources */,
+				875828E021330E69003A7F44 /* ViewController.swift in Sources */,
+				875829392135FD99003A7F44 /* FontAwesome.swift in Sources */,
+				875829452135FD99003A7F44 /* Enum.swift in Sources */,
+				875828DE21330E69003A7F44 /* AppDelegate.swift in Sources */,
+				875829472135FD99003A7F44 /* FontAwesomeBarButtonItem.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		875828E721330E6E003A7F44 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				875828F021330E6E003A7F44 /* IOTHomeTVTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		875828F221330E6E003A7F44 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				875828FB21330E6E003A7F44 /* IOTHomeTVUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		87A58943203B870800C89FCB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				87A5894F203B870800C89FCB /* DoorViewController.swift in Sources */,
+				875829462135FD99003A7F44 /* FontAwesomeBarButtonItem.swift in Sources */,
+				875829402135FD99003A7F44 /* FontAwesomeSegmentedControl.swift in Sources */,
+				875829442135FD99003A7F44 /* Enum.swift in Sources */,
+				875829422135FD99003A7F44 /* FontAwesomeStateRequirement.swift in Sources */,
+				87A5894B203B870800C89FCB /* AppDelegate.swift in Sources */,
+				874754D521325CBD0009AC77 /* NetworkManager.swift in Sources */,
+				8758293E2135FD99003A7F44 /* FontAwesomeExtension.swift in Sources */,
+				875829342135FD99003A7F44 /* FontAwesomeTabBarItem.swift in Sources */,
+				875829482135FD99003A7F44 /* FontAwesomeImageView.swift in Sources */,
+				875829382135FD99003A7F44 /* FontAwesome.swift in Sources */,
+				8758294A2135FD99003A7F44 /* FontAwesomeView.swift in Sources */,
+				875829362135FD99003A7F44 /* FontAwesomeImageRepresentable.swift in Sources */,
+				87A58961203C44BC00C89FCB /* BluetoothService.swift in Sources */,
+				8758294E2135FD99003A7F44 /* FontAwesomeTextRepresentable.swift in Sources */,
+				87A5894D203B870800C89FCB /* HomeViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		875828ED21330E6E003A7F44 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 875828DA21330E69003A7F44 /* IOTHomeTV */;
+			targetProxy = 875828EC21330E6E003A7F44 /* PBXContainerItemProxy */;
+		};
+		875828F821330E6E003A7F44 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 875828DA21330E69003A7F44 /* IOTHomeTV */;
+			targetProxy = 875828F721330E6E003A7F44 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		875828E121330E69003A7F44 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				875828E221330E69003A7F44 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		87A58950203B870800C89FCB /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				87A58951203B870800C89FCB /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		87A58955203B870800C89FCB /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				87A58956203B870800C89FCB /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		875828FD21330E6E003A7F44 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = AQYXU46U4D;
+				INFOPLIST_FILE = IOTHomeTV/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.devAtelier.IOTHomeTV;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 11.4;
+			};
+			name = Debug;
+		};
+		875828FE21330E6E003A7F44 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = AQYXU46U4D;
+				INFOPLIST_FILE = IOTHomeTV/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.devAtelier.IOTHomeTV;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 11.4;
+			};
+			name = Release;
+		};
+		875828FF21330E6E003A7F44 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = AQYXU46U4D;
+				INFOPLIST_FILE = IOTHomeTVTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.devAtelier.IOTHomeTVTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 3;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/IOTHomeTV.app/IOTHomeTV";
+				TVOS_DEPLOYMENT_TARGET = 11.4;
+			};
+			name = Debug;
+		};
+		8758290021330E6E003A7F44 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = AQYXU46U4D;
+				INFOPLIST_FILE = IOTHomeTVTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.devAtelier.IOTHomeTVTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 3;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/IOTHomeTV.app/IOTHomeTV";
+				TVOS_DEPLOYMENT_TARGET = 11.4;
+			};
+			name = Release;
+		};
+		8758290121330E6E003A7F44 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = AQYXU46U4D;
+				INFOPLIST_FILE = IOTHomeTVUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.devAtelier.IOTHomeTVUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 3;
+				TEST_TARGET_NAME = IOTHomeTV;
+				TVOS_DEPLOYMENT_TARGET = 11.4;
+			};
+			name = Debug;
+		};
+		8758290221330E6E003A7F44 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = AQYXU46U4D;
+				INFOPLIST_FILE = IOTHomeTVUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.devAtelier.IOTHomeTVUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 3;
+				TEST_TARGET_NAME = IOTHomeTV;
+				TVOS_DEPLOYMENT_TARGET = 11.4;
+			};
+			name = Release;
+		};
+		87A58959203B870800C89FCB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		87A5895A203B870800C89FCB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		87A5895C203B870800C89FCB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = IOTHome/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.devAtelier.IOTHome;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		87A5895D203B870800C89FCB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = IOTHome/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.devAtelier.IOTHome;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8758290321330E6E003A7F44 /* Build configuration list for PBXNativeTarget "IOTHomeTV" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				875828FD21330E6E003A7F44 /* Debug */,
+				875828FE21330E6E003A7F44 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8758290421330E6E003A7F44 /* Build configuration list for PBXNativeTarget "IOTHomeTVTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				875828FF21330E6E003A7F44 /* Debug */,
+				8758290021330E6E003A7F44 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8758290521330E6E003A7F44 /* Build configuration list for PBXNativeTarget "IOTHomeTVUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8758290121330E6E003A7F44 /* Debug */,
+				8758290221330E6E003A7F44 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		87A58942203B870800C89FCB /* Build configuration list for PBXProject "IOTHome" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				87A58959203B870800C89FCB /* Debug */,
+				87A5895A203B870800C89FCB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		87A5895B203B870800C89FCB /* Build configuration list for PBXNativeTarget "IOTHome" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				87A5895C203B870800C89FCB /* Debug */,
+				87A5895D203B870800C89FCB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 87A5893F203B870800C89FCB /* Project object */;
+}

@@ -1,0 +1,42 @@
+{    "bridge": {
+     "name": "IOTHome",
+     "username": "CC:22:3D:E3:CD:31",
+     "port": 51826,
+     "pin": "031-45-154"
+    },
+
+"description": "IOTHome HomeBridge",
+
+"platforms": [
+    {
+      "platform": "Bluetooth",
+      "accessories": [
+        {
+          "name": "IOTDoor",
+          "address": "30:AE:A4:28:73:76",
+          "services": [
+            {
+              "name": "Door Sensor",
+              "type": "Switch",
+              "UUID": "83b46845-6e9c-4b25-89cf-871cc74cc68e",
+              "characteristics": [
+                {
+                  "type": "On",
+                  "UUID": "4b61d6b9-2e29-4fdf-a74a-7b8bf70ecd9a"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+
+"accessories": [
+        { "accessory": "Dht",
+        "name": "Indoor Comfort Sensor",
+        "name_temperature": "Temperature",
+        "name_humidity": "Humidity",
+        "gpio":        "21",
+        "service": "dht22" }
+]}
